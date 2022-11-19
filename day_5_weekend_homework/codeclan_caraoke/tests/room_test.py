@@ -64,9 +64,10 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(actual_outcome, expected_outcome)
         
     def test_guest_fav_song_in_room(self):
-        self.room1.add_song_to_room(self.song1)
-        self.room1.add_song_to_room(self.song2)
-        self.room1.add_song_to_room(self.song3)
+        self.room3.guest_check_in(self.guest1)
+        self.room3.add_song_to_room(self.song1)
+        self.room3.add_song_to_room(self.song2)
+        self.room3.add_song_to_room(self.song3)
         expected_outcome = "Yeeahhh"
-        actual_outcome = self.room1.song_in_room(self.guest1, self.song1)
+        actual_outcome = self.room3.song_in_room(self.guest1)
         self.assertEqual(expected_outcome, actual_outcome)

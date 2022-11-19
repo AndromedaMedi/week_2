@@ -26,18 +26,13 @@ class Room:
         else:
             return False 
 
-    def song_in_room(self, guest, song):
+    def song_in_room(self, guest):
         for song in self.songs:
-            if guest.fav_song == song:
+            if guest.fav_song == song.title:
                 return "Yeeahhh"
         else:
             None
 
-    # def song_in_room(self, guest):
-    #     if guest.fav_song in self.songs:
-    #         return "Yeeahhh"
-    #     else:
-    #         None
 
 
 
